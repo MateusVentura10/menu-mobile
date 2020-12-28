@@ -1,0 +1,117 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-decoration:none;
+}
+body{
+    height:2000px;
+}
+header{
+    width:100%;
+    background:orange;
+    height:70px;
+    position:fixed;
+}
+nav{
+    max-width:1020px;
+    padding-left:10px;
+    padding-right:10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height:100%;
+}
+.logo{
+    width:190px;
+    height:50px;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.desktop, li{
+    display:flex;
+    height:100%;
+    align-items: center;
+}
+.desktop li a{
+    font-family: 'Open Sans', sans-serif;
+    font-size:1em;
+    color:white;
+    text-transform:uppercase;
+    padding-left:10px;
+    padding-right:10px;
+}
+.desktop li:hover{
+    background:rgb(245, 193, 48);
+}
+.hamburger, .mobile{
+    display:none;
+}
+
+@media(max-width:650px){
+    .desktop{
+        display:none;
+    }
+    .hamburger{
+        display:block;
+        width:35px;
+        height:30px;
+        background-image:url('hamburger.png');
+        background-size:100% 100%;
+        background-repeat:no-repeat;
+    }
+    .hamburger:hover{
+        cursor: pointer;
+    }
+    .mobile{
+        display:block;
+        width:60%;
+        height:2000px;
+        background:orange;
+        position:fixed;
+        right:-100%;
+        top:0;
+        border-left: 1px solid rgba(255, 255, 255, 0.218);
+    }
+    .mobile li{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.218);
+        padding-left:15px;
+        padding-top:15px;
+        padding-bottom:15px;
+        display:block;
+        height:auto;
+    }
+    .mobile li:hover{
+        background:rgb(245, 193, 48);
+    }
+    .mobile li a{
+        font-family: 'Open Sans', sans-serif;
+        font-size:1em;
+        color:white;
+        text-transform:uppercase;
+    }
+    .fechar{
+        background:rgb(245, 193, 48);
+        color:white;
+        font-family: 'Open Sans', sans-serif;
+        font-size:1em;
+        text-transform:uppercase;
+        width:40px;
+        height:30px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 0px 0px 5px;
+        position:absolute;
+        right:0;
+    }
+    .fechar:hover{
+        cursor: pointer;
+        opacity:0.7;
+    }
+    #home{
+        margin-top:40px;
+    }
+}
